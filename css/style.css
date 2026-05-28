@@ -263,7 +263,7 @@ body {
 /* ===== Projects Grid ===== */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -276,6 +276,7 @@ body {
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
+    aspect-ratio: 1 / 1;
 }
 
 .project-card:hover {
@@ -286,7 +287,7 @@ body {
 
 .project-card-embedded {
     grid-column: 1 / -1;
-    max-width: 500px;
+    aspect-ratio: auto;
 }
 
 .project-header {
@@ -305,6 +306,7 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .project-body p {
@@ -527,6 +529,10 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
+    .project-card {
+        aspect-ratio: auto;
+    }
+
     .project-card-embedded {
         grid-column: auto;
     }
@@ -568,5 +574,9 @@ footer a:hover {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        aspect-ratio: auto;
     }
 }
