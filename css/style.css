@@ -263,9 +263,10 @@ body {
 /* ===== Projects Grid ===== */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -278,7 +279,7 @@ body {
     display: flex;
     flex-direction: column;
     aspect-ratio: 1 / 1;
-    width: 100%;
+    min-width: 0;
 }
 
 .project-card:hover {
