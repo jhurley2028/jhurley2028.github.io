@@ -263,7 +263,7 @@ body {
 /* ===== Projects Grid ===== */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 2rem;
 }
 
@@ -274,12 +274,19 @@ body {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
+}
+
+.project-card-embedded {
+    grid-column: 1 / -1;
+    max-width: 500px;
 }
 
 .project-header {
@@ -295,6 +302,9 @@ body {
 
 .project-body {
     padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-body p {
@@ -319,10 +329,24 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
+    margin-top: auto;
 }
 
 .project-link:hover {
     color: var(--accent-color);
+}
+
+.embedded-iframe-container {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.embedded-iframe-container iframe {
+    border: none;
+    display: block;
+    border-radius: 0.5rem;
 }
 
 /* ===== Resume Page ===== */
@@ -503,6 +527,10 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
+    .project-card-embedded {
+        grid-column: auto;
+    }
+
     .features {
         grid-template-columns: 1fr;
     }
@@ -536,5 +564,9 @@ footer a:hover {
 
     .container {
         padding: 0 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
