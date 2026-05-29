@@ -264,9 +264,10 @@ body {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    max-width: 1400px;
+    gap: 4rem 3rem;
+    max-width: 1600px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .project-card {
@@ -511,9 +512,10 @@ footer a:hover {
 }
 
 /* ===== Responsive Design ===== */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .projects-grid {
-        gap: 2.5rem;
+        gap: 3rem 2rem;
+        max-width: 1200px;
     }
 }
 
@@ -549,6 +551,7 @@ footer a:hover {
 
     .project-card {
         aspect-ratio: auto;
+        min-height: 500px;
     }
 
     .project-card-embedded {
@@ -598,5 +601,6 @@ footer a:hover {
 
     .project-card {
         aspect-ratio: auto;
+        min-height: 400px;
     }
 }
